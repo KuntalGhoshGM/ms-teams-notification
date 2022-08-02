@@ -11,11 +11,11 @@ entrypoint.sh MS_TEAMS_WEBHOOK_URL MESSAGE
 
 #### 'Dockerfile'
 This file is used to invoke the action within the conyainer based on the image defined on the top with 'FROM'
-'''
+```
 
 FROM ubuntu:20.04
 RUN apt-get update -y && apt-get install curl -y
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-'''
+```
